@@ -1,0 +1,5 @@
+hacer los componentes basicos de la pagina
+terminar con la function getWeather
+modificar el icono
+hacer que el fondo de la pagina sea relativo al clima
+
