@@ -1,6 +1,6 @@
 import {React} from "react"
 import { setCurrentCityData } from "../setCurrentCityData"
-
+import "./CitySetterStyles.css"
 
 export function CitySetter({currentCity, root}){
     /* 
@@ -14,7 +14,7 @@ export function CitySetter({currentCity, root}){
                     e.target.value = ""
                     setCurrentCityData(currentCity, root)
                 }
-            }} type="text" className="input-container__input-text" id="cityName-input"></input>
+            }} type="text" className="input-text" id="cityName-input" placeholder="Where do u live :) "></input>
         </>
     )
 }

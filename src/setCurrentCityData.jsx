@@ -11,7 +11,7 @@ export function setCurrentCityData(newCity, root){
     getWeather(newCity).then(info => {
         if (info.cod !== "404"){
             root.render(
-                <MainCompo currentCity={newCity} root={root} info={JSON.stringify(info)}/>
+                <MainCompo currentCity={newCity} root={root} info={info}/>
             )
         }
 

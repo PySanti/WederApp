@@ -6,6 +6,6 @@ export async function getWeather(cityName){
         const data = await response.json();
         return data; // se devolverá como una promesa, porque la función es async
     } catch(error) {
-        throw new Error(`Error en la solicitud de clima de ${cityName}`)
+        console.log(error)
     }
 }

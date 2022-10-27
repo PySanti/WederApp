@@ -1,0 +1,13 @@
+.page-header{
+    display: flex;
+    align-items: center;
+}
+.page-header__city-name{
+    font-family: 'Josefin Slab', serif;
+    letter-spacing: 0;
+    font-size: 10vw;
+}
+.page-header__img{
+    object-fit: contain;
+
+}

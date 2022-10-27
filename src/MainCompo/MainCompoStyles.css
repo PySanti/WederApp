@@ -1,0 +1,13 @@
+.main-container{
+    padding : 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(to top right, #999 10%, #0df);
+    font-family: 'Fauna One';
+    user-select: none;
+    width: 100vw;
+    height: 100vh;
+}
+

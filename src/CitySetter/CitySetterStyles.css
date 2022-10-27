@@ -1,0 +1,19 @@
+.input-text{
+    border: none;
+    background-color: inherit;
+    transition : box-shadow .5s;
+    padding: 10px;
+    font-family: 'Josefin Sand';
+    font-size: 150%;
+}
+
+.input-text:focus{
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 10px #0af;
+}
+
+.input-text::placeholder{
+}
+
+

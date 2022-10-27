@@ -1,3 +1,5 @@
 modificar el icono
 hacer que el fondo de la pagina sea relativo al clima
 completar el readme
+agregar css para cuando no haya internet
+agregar css al citySetter cuando se introduzca un pais invalido
