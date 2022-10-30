@@ -1,0 +1,28 @@
+.not-loaded-page-compo{
+    position: absolute;
+    --box-width : 50px;
+    --box-height : 5px;
+    border-radius: 10px;
+    left: calc(50vw - var(--box-width));
+    top: calc(50vh - var(--box-height));
+    width: var(--box-width);
+    height: var(--box-height);
+    background-color: #0af;
+    animation-name: not-load;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes not-load {
+    0%{
+        left: calc(50vw - var(--box-width));
+    }
+    25%{
+        left: calc(55vw - var(--box-width));
+    }
+    100%{
+        left: calc(50vw - var(--box-width));
+    }
+
+}

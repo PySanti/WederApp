@@ -1,14 +1,18 @@
 .main-container{
+    --base-background-color : #aaa;
+    --son-background-color : #0ff;
+    --background-color-grandpa : linear-gradient(to top right, var(--base-background-color) 20%, var(--son-background-color));
     padding : 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background: linear-gradient(to top right, #999 10%, #0df);
+    background: var(--background-color-grandpa);
     font-family: 'Josefin Slab', serif;
     user-select: none;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 }
 
 

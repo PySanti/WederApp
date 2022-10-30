@@ -3,8 +3,9 @@
     z-index: 9;
     transition: transform .5s;
     font-family: 'Dancing Script', cursive;
+    transform: scale(.1, .1);
 }
 
 .error-msg-display{
-    transform: translate(0,-50px);
+    transform: translate(0,-50px)  scale(1,1);
 }

@@ -1,6 +1,9 @@
 import {React} from "react"
 import { getWeather } from "./getWeather"
 import { MainCompo } from "./MainCompo/MainCompo"
+import {notLoadedCompoClassName} from "./NotLoadedPageCompo/NotLoadedPageCompo"
+import {pageLoaded} from "./index"
+import {setPageLoaded} from "./index"
 
 let failedInputErrorMsgClassName = "error-msg-display"
 
@@ -10,22 +13,26 @@ export function setCurrentCityData(newCity, root){
      * 
      * 
      */
-    getWeather(newCity).then(info => {
+        getWeather(newCity).then(info => {
+        if (!pageLoaded){
+            let notLoadedCompo = document.getElementsByClassName(notLoadedCompoClassName)[0];
+            console.log(notLoadedCompo)
+            notLoadedCompo.addEventListener("onload", () => {
+                notLoadedCompo.classList.remove(notLoadedCompoClassName)
+            })
+            setPageLoaded(true)
+        }
         if (!(info === undefined)){
             let errorMsg = document.getElementsByClassName("error-msg")[0];
             if (info.cod !== "404"){
-                let mainDescr = (info.weather[0].main).toLowerCase()
-                if (mainDescr === "rain"){
-                    console.log("lluvias")
-                } else if (mainDescr === "clouds"){
-                    console.log("Clouds")
-                }
                 root.render(
                     <MainCompo currentCity={newCity} root={root} info={info}/>
                 )
-                errorMsg.classList.remove(failedInputErrorMsgClassName)
             } else {
                 errorMsg.classList.add(failedInputErrorMsgClassName)
+                setTimeout(()=>{
+                    errorMsg.classList.remove(failedInputErrorMsgClassName)
+                }, 1000)
             }
         } else {
             // codigo para cuando no hay internet

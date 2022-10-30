@@ -1,5 +1,3 @@
 completar el readme
 agregar css para cuando no se haya cargado la pagina
-modificar title de la pagina
-agregar animacion de posibles paises encima del citySetter
-agregar animacion para cuando se cambia el pais
+icono
