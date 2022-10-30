@@ -3,6 +3,7 @@ import { CityName } from "../CityName/CityName"
 import { CitySetter } from "../CitySetter/CitySetter"
 import { CityInfoContainer } from "../CityInfoContainer/CityInfoContainer"
 import "./MainCompoStyles.css"
+import {ErrorMsg} from "../ErrorMsg/ErrorMsg"
 
 
 export function MainCompo({currentCity, root, info}){
@@ -10,7 +11,10 @@ export function MainCompo({currentCity, root, info}){
         <div className="main-container">
             <CityName currentCity={currentCity} info={info}/>
             <CityInfoContainer info={info}/>
-            <CitySetter currentCity={currentCity} root={root}/>
+            <div className="citySetter-container">
+                <CitySetter currentCity={currentCity} root={root}/>
+                <ErrorMsg/>
+            </div>
         </div>
     )
 }

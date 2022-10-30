@@ -1,5 +1,5 @@
-modificar el icono
-hacer que el fondo de la pagina sea relativo al clima
 completar el readme
-agregar css para cuando no haya internet
-agregar css al citySetter cuando se introduzca un pais invalido
+agregar css para cuando no se haya cargado la pagina
+modificar title de la pagina
+agregar animacion de posibles paises encima del citySetter
+agregar animacion para cuando se cambia el pais

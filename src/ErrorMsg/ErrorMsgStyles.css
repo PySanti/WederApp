@@ -1,0 +1,10 @@
+.error-msg{
+    position: absolute;
+    z-index: 9;
+    transition: transform .5s;
+    font-family: 'Dancing Script', cursive;
+}
+
+.error-msg-display{
+    transform: translate(0,-50px);
+}

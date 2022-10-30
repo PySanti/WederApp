@@ -5,9 +5,14 @@
     align-items: center;
     justify-content: space-around;
     background: linear-gradient(to top right, #999 10%, #0df);
-    font-family: 'Fauna One';
+    font-family: 'Josefin Slab', serif;
     user-select: none;
     width: 100vw;
     height: 100vh;
 }
 
+
+.citySetter-container{
+    display: flex;
+    justify-content: center;
+}

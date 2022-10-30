@@ -25,8 +25,8 @@ function convertSimpleObjToReactArray(obj){
     Object.keys(obj).forEach((key) =>{
         if (key.slice(0,4) ==="temp"){
             obj[key] = `${kelvinToCels(obj[key]).toFixed(3)}°`
-            compoList.push(<Info>{key} : {obj[key]}</Info>)}
-        else{
+            compoList.push(<Info>{key} : {obj[key]}</Info>)
+        } else{
             if (!(nonRenderList.includes(key))){
                 compoList.push(<Info>{key} : {obj[key]}</Info>)
             }
@@ -34,8 +34,6 @@ function convertSimpleObjToReactArray(obj){
     })
     return compoList;
 }
-
-
 
 export function CityInfoContainer({info}){
     return (
