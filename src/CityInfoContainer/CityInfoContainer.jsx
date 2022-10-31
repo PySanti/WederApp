@@ -19,17 +19,23 @@ function convertObjToSimpleObj(info){
     })
     return componentList;
 }
+
+function isTemp(key){
+    return key.slice(0,4) ==="temp"
+}
+
+function getInfoCompo(obj, key){
+    return (<Info>{key} : {obj[key]}</Info>)
+}
 function convertSimpleObjToReactArray(obj){
     let compoList = []
     let nonRenderList = ["id", "base", "feels_like", "visibility", "deg", "all", "dt", "sunrise", "sunset", "timezone", "type", "icon", "cod"]
     Object.keys(obj).forEach((key) =>{
-        if (key.slice(0,4) ==="temp"){
-            obj[key] = `${kelvinToCels(obj[key]).toFixed(3)}°`
-            compoList.push(<Info>{key} : {obj[key]}</Info>)
-        } else{
-            if (!(nonRenderList.includes(key))){
-                compoList.push(<Info>{key} : {obj[key]}</Info>)
+        if (!(nonRenderList.includes(key))){
+            if (isTemp(key)){
+                obj[key] = `${kelvinToCels(obj[key]).toFixed(3)}°`
             }
+            compoList.push(getInfoCompo(obj, key))
         }
     })
     return compoList;

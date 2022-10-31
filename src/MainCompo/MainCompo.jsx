@@ -4,7 +4,6 @@ import { CitySetter } from "../CitySetter/CitySetter"
 import { CityInfoContainer } from "../CityInfoContainer/CityInfoContainer"
 import "./MainCompoStyles.css"
 import {ErrorMsg} from "../ErrorMsg/ErrorMsg"
-import {NotLoadedPageCompo} from "../NotLoadedPageCompo/NotLoadedPageCompo"
 
 
 export function MainCompo({currentCity, root, info}){
