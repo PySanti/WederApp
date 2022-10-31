@@ -1,3 +1,4 @@
 completar el readme
-agregar css para cuando no se haya cargado la pagina
 icono
+hacer el web hosting
+hacer un refactor
