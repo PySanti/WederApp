@@ -1,6 +1,5 @@
 import {React} from "react"
 
 export function Info({children}){
-    <li>{children}</li>
-
+    return <li>{children}</li>
 }
